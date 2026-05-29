@@ -1,421 +1,384 @@
-```html id="xj4v92"
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SindieTech LLC | Remote Support & Automation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
-      --accent: #38bdf8;
-      --accent-light: #7dd3fc;
-      --white: #f8fafc;
-      --gray: #cbd5e1;
-      --success: #22c55e;
-    }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--primary);
-      color: var(--white);
-      line-height: 1.7;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background:
-        linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop')
-        center/cover no-repeat;
-    }
-
-    .hero {
-      max-width: 850px;
-    }
-
-    .logo {
-      font-size: 1rem;
-      letter-spacing: 3px;
-      color: var(--accent);
-      margin-bottom: 20px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      line-height: 1.1;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--gray);
-      margin-bottom: 35px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--primary);
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s ease;
-      margin: 10px;
-    }
-
-    .btn:hover {
-      background: var(--accent-light);
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 90px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: var(--accent);
-    }
-
-    .section-text {
-      text-align: center;
-      max-width: 800px;
-      margin: auto auto 60px auto;
-      color: var(--gray);
-      font-size: 1.1rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: var(--secondary);
-      padding: 30px;
-      border-radius: 14px;
-      transition: 0.3s ease;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-      color: var(--accent-light);
-      font-size: 1.3rem;
-    }
-
-    .card p {
-      color: var(--gray);
-    }
-
-    .why-us {
-      background: #111827;
-      border-radius: 20px;
-      padding: 60px;
-      text-align: center;
-    }
-
-    .why-us ul {
-      list-style: none;
-      margin-top: 30px;
-    }
-
-    .why-us li {
-      margin: 15px 0;
-      color: var(--gray);
-      font-size: 1.1rem;
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      align-items: start;
-    }
-
-    .contact-info h3,
-    .contact-form h3 {
-      margin-bottom: 20px;
-      color: var(--accent-light);
-    }
-
-    .contact-info p {
-      margin-bottom: 15px;
-      color: var(--gray);
-    }
-
-    form {
-      background: var(--secondary);
-      padding: 30px;
-      border-radius: 14px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 18px;
-      border: none;
-      border-radius: 8px;
-      background: #334155;
-      color: var(--white);
-      font-size: 1rem;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: 2px solid var(--accent);
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      background: var(--accent);
-      color: var(--primary);
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background: var(--accent-light);
-    }
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      background: #020617;
-      color: #94a3b8;
-    }
-
-    @media(max-width: 768px) {
-      h1 {
-        font-size: 2.8rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-
-      .why-us {
-        padding: 40px 25px;
-      }
-    }
-  </style>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <title>Sindie S. Castro | Portfolio</title><br>
+    <br>
 </head>
 
-<body>
+<body style="background-color: rgb(7, 4, 4); color: cornsilk;">
 
-<header>
-  <div class="hero">
-    <div class="logo">SindieTech LLC</div>
+    <header>
+        <div class="wave" style="background-color: black;">
+            <div class="container header-container", center="flex text-center">
+                <center>
+                    <h1 style="color: rgb(246, 249, 250);" name>Sindie S. Castro</h1>
+                </center>
+                <!-- <h4 class="subtitle text-center">Presenting data and results to audiences.</h4> -->
+                <center>
+                    <img src="https://th.bing.com/th/id/OIP.eGk-VvoI0Z2BToFHE5UrAQHaHa?pid=ImgDet&w=180&h=180&c=7&dpr=2" class="girl" alt="girl image"/><br>
+                </center>
+            <br>
+            </div>
+        </div>
+        <div class="wave-svg" style="background-color: rgb(192, 233, 8);">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="50" 
+                preserveAspectRatio="none" viewBox="0 0 1600 200">
+                <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+                <path
+                    d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
+                </svg><br>
+                <br>
+        </div>
+    </header><br>
+    <br>
 
-    <h1>
-      Remote Support & Business Automation
-    </h1>
+    <section class="container">
+        <!-- <h2 class="title">Thanks for exploring my work. -->
+        </h2>
+        <h4 class="subtitle">Data Analyst with natural leadership qualities and a background in Education, 
+            Prevention Programs, and Government Policy </h4><br>
+            <br>
+    </section>
 
-    <p>
-      Helping small businesses streamline operations with
-      remote support, data services, reporting solutions,
-      and Microsoft Power Automate workflows.
-    </p>
 
-    <a href="#services" class="btn">Explore Services</a>
-    <a href="#contact" class="btn">Contact Us</a>
-  </div>
-</header>
+    <section class="container skill-container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
 
-<section id="about">
-  <h2>About SindieTech</h2>
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <p>HTML5</p>
+                        </div>
+                    </div>
 
-  <p class="section-text">
-    SindieTech LLC provides reliable remote business support,
-    reporting solutions, workflow automation, and freelance
-    data services tailored for small businesses and growing teams.
-    Our mission is to help businesses save time, improve efficiency,
-    and stay organized through smart digital solutions.
-  </p>
-</section>
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-python fa-3x"></i>
+                            <p>Python</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-js-square fa-3x"></i>
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class='fas fa-database fa-3x'></i><br/>
+                            <!-- <i class="fab fa-database f1c0"></i> -->
+                            <p>Database</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-git fa-3x"></i>
+                            <p>Git</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-github fa-3x"></i>
+                            <p>Github</p>
+                        </div>
+                    </div><br>
+                    <br>
+                    <!-- <div class="col">
+                        <div class="skill-bar-title">
+                            <i class="fab fa-tableau fa-3x"></i>
+                            <p>Tableau</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
 
-<section id="services">
-  <h2>Our Services</h2>
+    </section>
 
-  <div class="services">
-
-    <div class="card">
-      <h3>Remote Administrative Support</h3>
-      <p>
-        Professional virtual assistance for scheduling,
-        organization, documentation, spreadsheets,
-        and day-to-day operations.
-      </p>
+    <div class="wave-svg-color" style="background: rgb(192, 233, 8)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="50"
+            preserveAspectRatio="none" viewBox="0 0 1600 200">
+            <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+            <path
+                d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z"/>
+        </svg><br>
+        <br>
     </div>
 
-    <div class="card">
-      <h3>Freelance Data Services</h3>
-      <p>
-        Data cleanup, organization, reporting,
-        spreadsheet management, and structured
-        business data solutions.
-      </p>
+    <section class="container-color" style="color: rgb(192, 233, 8)">
+    </section><br>
+    <br>
+    <section class="container" style="color: rgb(2, 0, 19)">
+        <div class="card custom-card" style="background: rgb(210, 243, 214)">
+            <div class="card-body">
+                <span class="card-icon">
+                    <!-- <i class="fas fa-code"></i> -->
+                </span><br>
+                <br>
+
+                <h3 class="card-title">More about Me</h3>
+                <p class="card-text">Attentive to visualization details and a strong critical thinker 
+                    evident in improving documentation and reporting. Completed a 24-week certificate 
+                    program in Data Analytics and Visualization. Recently led and coordinated a project in a 
+                    team of five using PgAdmin, Heroku, Python, Google slides, Jupyter Notebook, and Tableau 
+                    for visualization. Great project management skills by working concurrently on VBA projects, 
+                    Excel dashboards, creating brochures, and completing quarterly reports. A problem solver as 
+                    shown in my initiative to create a system to document and analyze daily calls. I have viewed 
+                    data from a program’s perspective for 15 years in education, government, and the nonprofit 
+                    sector and I understand the importance of utilizing data to document and solve a problem, 
+                    visualize results, and highlight opportunities for improvements. I am pursuing a career in data
+                    analytics to leverage my technical and project management skills as well as attention to detail 
+                    to help your business view data from a program’s perspective to support detailed and efficient 
+                    analysis and visualization.  </p>
+                <h5 class="card-title">
+                    Technologies I use:
+                </h5>
+                <p class="card-text">
+                    Excel, VBA, Python, SQL, Jupyter Notebook, PostgreSQL, Visual Studio Code, Git, JavaScript, HTML, Tableau, and R. 
+                </p> 
+            </div>
+        </div><br>
+        <br>
+    </section><br>
+    <br>
+
+    <!-- TIMELINE -->
+    <section class="container">
+        <h1 class="title">Projects</h1>
+        <h3 class="subtitle">These are just a few projects I have worked on.</h3>
+    </section>
+
+
+    <div class="container">
+        <div id="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-star fa-align"></i>
+
+                   
+                        </div>
+                        <div class="timeline-content">
+                            <h2>Predicting Sales Using Machine Learning</h2>
+                            <p>
+                                For this analysis, I was the team leader and we used data of video game sales from North America and Japan to see if a Linear Regression
+                                Model would predict if European sales would be greater than 75% (threshold). The data was explored, and we kept platform, genre, 
+                                and sales from North America, Japan, and Europe. Three databases were created in PgAdmin and stored in Heroku, a cloud-based storage 
+                                system. The databases were combined using Python coding which was then pushed into a Machine Learning Model called Linear Regression
+                                resulting with an 88% accuracy showing that 75% or above sales were successful in Europe; thus concluding that launching a video game
+                                in Europe could be successful. 
+                            </p>
+                            <a href="https://github.com/SindieCastro/Predicting_Sales_Using_Machine_Learning/blob/main/jupyter_notebook_files/pred_EU_Sales_from_NA_JP/Video_game_Logistic_Regression_resample_EU_from_NA_JP.ipynb" 
+                            class="btn"><i class="fab fa-github" style="color: greenyellow"> Project Information</i></a>
+                            <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-star fa-align"></i>
+
+                </div>
+                <div class="timeline-content">
+                    <h2>Election Analysis</h2>
+                    <p>
+                        Created a Python script to get election results.
+                    </p>
+                    <a href="https://github.com/SindieCastro/Election_Analysis/blob/main/PyPoll_Challenge.py" class="btn"><i class="fab fa-github"style="color: greenyellow"> Project Information</i></a>
+                    <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+                </div>
+            </div>
+           
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-star fa-align"></i>
+
+                </div>
+                <div class="timeline-content right">
+                    <h2>Pewlett Hackard Analysis</h2>
+                    <p>
+                        I used SQL queries to create a database to determine the number of 
+                        retiring employees as 
+                        well as identify employees 
+                        who are eligible to participate in a 
+                        mentorship program.
+                    
+                    </p>
+                    <a href="https://github.com/SindieCastro/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_Database_challenge.sql" class="btn"><i class="fab fa-github" style="color: greenyellow;"> Project Information</i></a>
+                    <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-star fa-align"></i>
+                </div>
+                <div class="timeline-content">
+                    <h2>School District Analysis</h2>
+                    <p>
+                        For this analysis, I replaced the math and reading 
+                        scores of Thomas High School
+                        ninth graders with Not a Number also known as NaN using Jupyter Notebook.
+                    </p>
+                    <a href="https://github.com/SindieCastro/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb" class="btn"><i class="fab fa-github" style="color: greenyellow"> Project Information</i></a>
+                    <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-star fa-align"></i>
+
+                </div>
+                <div class="timeline-content right">
+                    <h2>Pewlett Hackard Analysis</h2>
+                    <p>
+                        For this analysis, I used a SQL database to determine the number of retiring employees as well as identify 
+                        employees who are eligible to participate in a mentorship program. 
+                    </p>
+                    <a href="https://github.com/SindieCastro/Pewlett-Hackard-Analysis" class="btn"><i class="fab fa-github" style="color: greenyellow" > Project Information</i></a>
+                    <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-star fa-align"></i>
+                </div>
+                <div class="timeline-content">
+                    <h2>MechaCar Statistical Analysis</h2>
+                    <p>
+                        For this analysis, I used R to predict the mpg of MechaCar prototypes, collect summary statistics on the pounds per square inch(PSI) of the suspension 
+                        coils, and determine if the manufacturing lots are statistically different from the mean population.
+                    </p>
+                    <a href="https://github.com/SindieCastro/MechaCar_Statistical_Analysis" class="btn"><i class="fab fa-github" style="color: greenyellow"> Project Information</i></a>
+                    <!-- <a href="#" class="btn"><i class="fas fa-tv"></i> Live Demo unavailable</a> -->
+                </div><br>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Monthly Reporting</h3>
-      <p>
-        Customized KPI tracking, operational summaries,
-        business insights, and recurring monthly reports.
-      </p>
+    <div class="wave-svg-color" style="background: rgb(192, 233, 8)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="50"
+            preserveAspectRatio="none" viewBox="0 0 1600 200">
+            <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+            <path
+                d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
+        </svg><br>
+        <br>
     </div>
 
-    <div class="card">
-      <h3>Power Automate Workflows</h3>
-      <p>
-        Automate repetitive tasks using Microsoft Power Automate,
-        including approvals, reminders, notifications,
-        file management, and workflow optimization.
-      </p>
+    <!-- EDUCATION -->
+    <section class="container education-container">
+        <h1 class="title">Education </h1>
+        <article class="education-item">
+            <h3 class="subtitle">University of Central Florida</h3>
+            <span class="text-muted">Data Analytics and Visualization Certificate  | Feb 2021 - Jul 2021</span>
+        </article>
+        <hr />
+        <article class="education-item">
+            <h3 class="subtitle">Northeastern University</h3>
+            <span class="text-muted">Ed.D Organizational Leadership & Communication | Sept 2010 - Jan 2014</span>
+        </article>
+        <hr />
+        <article class="education-item">
+            <h3 class="subtitle">University of Phoenix</h3>
+            <span class="text-muted">M.A. Curriculum & Instruction | Nov 2005 - Mar 2009</span>
+        </article>
+        <hr />
+        <article class="education-item">
+            <h3 class="subtitle">Salem State College</h3>
+            <span class="text-muted">B.S. Elementary Education & Psychology | Sept 2001 - May 2005</span>
+        </article> <br>
+
+
+    </section>
+
+    <!-- AVAILABLE FOR WORK -->
+    <section class="container-color">
+        <div class="container">
+            <!-- <h1 class="title">I would be available 2 weeks after accepting a job offer. -->
+            </h1>
+            <!-- <h3 class="subtitle">Currently working as a Government Operations Consultant focusing on Government Policy. I look forward to hearing from you!</h3> -->
+        </div>
+    </section>
+
+    <div class="wave-svg-color" style="background: rgb(192, 233, 8)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="50"
+            preserveAspectRatio="none" viewBox="0 0 1600 200">
+            <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+            <path
+                d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
+        </svg><br>
+        <br>
+    </div> <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- FOOTER -->
+    <section class="container-dark">
+        <center>
+        <div class="container">
+            <h1>Contact Me</h1>
+            <h3 class="intro subtitle">
+                <!-- <a href="https://twitter.com/DrSindieSCastro" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                <a href="https://www.linkedin.com/in/sindie-castro/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SindieCastro" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:sindiecastro@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </h3>
+        </div>
+    </section>
+        </center>   
+    <footer>
+        <div class="container">
+            Sindie Castro &copy; 2021 - 2022 |
+        </div>
+    </footer>
+        
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+
+    <div class="wave-svg-color" style="background: rgb(192, 233, 8)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="50"
+            preserveAspectRatio="none" viewBox="0 0 1600 200">
+            <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+            <path
+                d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
+        </svg><br>
+        <br>
     </div>
-
-    <div class="card">
-      <h3>Business Process Automation</h3>
-      <p>
-        Streamline business operations through digital workflows,
-        automation consulting, and productivity systems.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Excel Dashboards & Tools</h3>
-      <p>
-        Interactive spreadsheets, dashboards,
-        formulas, reporting templates,
-        and performance tracking systems.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="why-us">
-    <h2>Why Businesses Choose Us</h2>
-
-    <ul>
-      <li>✔ Flexible Part-Time Support</li>
-      <li>✔ Affordable Business Solutions</li>
-      <li>✔ Remote Convenience</li>
-      <li>✔ Workflow Automation Expertise</li>
-      <li>✔ Professional Reporting Services</li>
-      <li>✔ Tailored Small Business Support</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-
-  <div class="contact-container">
-
-    <div class="contact-info">
-      <h3>Let's Work Together</h3>
-
-      <p>
-        Ready to improve efficiency and simplify your operations?
-        Reach out today to discuss your business needs.
-      </p>
-
-      <p><strong>Email:</strong> info@sindietech.com</p>
-      <p><strong>Phone:</strong> (555) 555-5555</p>
-      <p><strong>Availability:</strong> Remote Services Nationwide</p>
-    </div>
-
-    <div class="contact-form">
-      <h3>Send a Message</h3>
-
-      <form action="https://formsubmit.co/info@sindietech.com" method="POST">
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        />
-
-        <input
-          type="text"
-          name="company"
-          placeholder="Company Name"
-        />
-
-        <textarea
-          name="message"
-          placeholder="Tell us about your project or business needs..."
-          required
-        ></textarea>
-
-        <button type="submit">
-          Send Message
-        </button>
-
-      </form>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>
-    © 2026 SindieTech LLC • Remote Support & Automation Services
-  </p>
-</footer>
-
 </body>
+
 </html>
-```
